@@ -1,13 +1,13 @@
 # Heap
-This repository contains all about Heap Data structure, its implementation, its operations like:
-  1] Build Heap
-  2] Max Heapify
-  3] Insert a node in heap
-  4] Increase a node's value
-  5] Decrease a node's value
-  6] Push a value in heap
-  7] Pop the maximum value from heap
-  8] Heap sort Ascending
-  9] Heap sort Descending
+### This repository contains all about Heap Data structure, its implementation, its operations like:-
+  * Build Heap
+  * Max Heapify
+  * Insert a node in heap
+  * Increase a node's value
+  * Decrease a node's value
+  * Push a value in heap
+  * Pop the maximum value from heap
+  * Heap sort Ascending
+  * Heap sort Descending
   
-Hope you will like it. Thanks✌
+And, Time complexity of each operation is also written, that shows why Heap is faster than some other known DS. Hope you will like it. Thanks✌
