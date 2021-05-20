@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /*
@@ -50,6 +51,14 @@ public class Heap_impl{
 
     mp.insertNode(heap, 10);
     System.out.println("Inserting 10 in heap, then heap = "+heap);
+
+    ArrayList<Integer>temp_heap1 = new ArrayList<>(heap);
+    ArrayList<Integer>sorted_asc = mp.HeapSortAscending(temp_heap1);
+    System.out.println("Heap after sorting in ascending order = "+sorted_asc);
+
+    ArrayList<Integer>temp_heap2 = new ArrayList<>(heap);
+    ArrayList<Integer>sorted_desc = mp.HeapSortDesc(temp_heap2);
+    System.out.println("Heap after sorting in descending order = "+sorted_desc);
 
     }
 }
@@ -196,6 +205,30 @@ class Max_Heap{
             }
             
         }
+     }
+
+     //TC = O(N*logN)
+     public ArrayList<Integer> HeapSortDesc(ArrayList<Integer>heap){
+
+        ArrayList<Integer>ans = new ArrayList<>();
+        int initial_size = heap.size();
+        for(int i=0;i<initial_size;i++){
+            int temp = extractMax(heap);
+            ans.add(temp);
+        }
+        return ans;
+
+     }
+     
+     //TC = O(N*logN)
+     public ArrayList<Integer>HeapSortAscending(ArrayList<Integer>heap){
+         ArrayList<Integer>ans=new ArrayList<>();
+         int initial_size = heap.size();
+         for(int i=0;i<initial_size;i++){
+             ans.add(extractMax(heap));
+         }
+        Collections.reverse(ans);
+        return ans;
      }
 
      
